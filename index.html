@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajaya - Tu próxima aventura</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f7fb;
+      color: #172b4d;
+    }
+    header {
+      background: #075985;
+      color: white;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0 0 10px;
+    }
+    .hero {
+      padding: 45px 20px;
+      text-align: center;
+      background: white;
+    }
+    .hero h2 {
+      font-size: 30px;
+    }
+    .hero p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .search {
+      max-width: 420px;
+      margin: 25px auto;
+      padding: 20px;
+      background: #e0f2fe;
+      border-radius: 14px;
+    }
+    input, select, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px;
+      margin: 7px 0;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 16px;
+    }
+    button {
+      background: #ea580c;
+      color: white;
+      border: none;
+      font-weight: bold;
+    }
+    .offers {
+      padding: 25px 18px;
+      text-align: center;
+    }
+    .offer {
+      background: white;
+      padding: 20px;
+      margin: 14px auto;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #00000010;
+    }
+    footer {
+      padding: 24px;
+      text-align: center;
+      background: #082f49;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✈️ Viajaya</h1>
+    <p>Tu próxima aventura empieza aquí</p>
+  </header>
+
+  <section class="hero">
+    <h2>El mundo te espera</h2>
+    <p>Descubre destinos increíbles y encuentra
+    tu próximo viaje al mejor precio.</p>
+
+    <div class="search">
+      <form action="https://www.google.com/search" method="get">
+        <label for="destino">¿Dónde quieres viajar?</label>
+        <input id="destino" name="q"
+          placeholder="Ej. Roma, París, Canarias" required>
+        <button type="submit">Buscar destinos</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="offers">
+    <h2>Descubre Viajaya</h2>
+    <div class="offer">
+      <h3>🌴 Playas paradisíacas</h3>
+      <p>Encuentra inspiración para tu próxima escapada.</p>
+    </div>
+    <div class="offer">
+      <h3>🏙️ Grandes ciudades</h3>
+      <p>Explora nuevas culturas y vive experiencias únicas.</p>
+    </div>
+    <div class="offer">
+      <h3>₿ Pagos con Bitcoin</h3>
+      <p>Estamos preparando opciones de pago con criptomonedas.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Viajaya</p>
+    <p>Tu aventura, a tu manera.</p>
+  </footer>
+</body>
+</html>
