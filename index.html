@@ -2,234 +2,387 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Viajaya: descubre destinos, vuelos, hoteles y experiencias para tu próximo viaje.">
-<meta name="theme-color" content="#087e8b">
-<link rel="manifest" href="/Vajaya/manifest.json">
-<title>Viajaya | Tu próximo destino empieza aquí</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#f4f8fb;
- color:#183044;
-}
-header{
- background:#073b4c;
- color:white;
- padding:18px 6%;
- display:flex;
- justify-content:space-between;
- align-items:center;
- flex-wrap:wrap;
- gap:12px;
-}
-.logo{font-size:29px;font-weight:900;color:#20d6c1}
-nav a{
- color:white;text-decoration:none;
- margin:8px;font-size:14px;
-}
-.hero{
- background:linear-gradient(120deg,#073b4cdd,#087e8bdd),
- url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600");
- background-size:cover;background-position:center;
- color:white;text-align:center;
- padding:90px 20px;
-}
-.hero h1{font-size:42px;margin:0 0 15px}
-.hero p{font-size:19px;line-height:1.6}
-.search{
- background:white;color:#183044;
- max-width:650px;margin:30px auto 0;
- padding:22px;border-radius:16px;
- box-shadow:0 8px 30px #001f3030;
-}
-input,button{
- width:100%;padding:15px;
- border-radius:9px;font-size:16px;
-}
-input{border:1px solid #ccd8df;margin-bottom:10px}
-button,.btn{
- background:#087e8b;color:white;
- border:0;padding:14px 20px;
- border-radius:9px;font-weight:bold;
- cursor:pointer;text-decoration:none;
- display:inline-block;
-}
-button:hover,.btn:hover{background:#065e68}
-section{padding:55px 6%;text-align:center}
-h2{font-size:30px;color:#073b4c}
-.intro{max-width:700px;margin:0 auto 30px;line-height:1.7}
-.grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:22px;max-width:1100px;margin:auto;
-}
-.card{
- background:white;border-radius:15px;
- overflow:hidden;text-align:left;
- box-shadow:0 5px 20px #18304412;
-}
-.card img{width:100%;height:165px;object-fit:cover}
-.card-content{padding:20px}
-.card h3{margin-top:0;color:#087e8b}
-.card p{line-height:1.5;color:#526574}
-.card .btn{margin-top:8px}
-.features{background:#e6f4f3}
-.feature{
- background:white;padding:25px;border-radius:14px;
-}
-.feature h3{color:#087e8b}
-.crypto{background:#073b4c;color:white}
-.crypto h2{color:#20d6c1}
-.crypto p{line-height:1.7}
-footer{
- background:#052d3a;color:white;
- text-align:center;padding:35px 15px;
- line-height:2;
-}
-footer a{color:#20d6c1;text-decoration:none}
-.small{font-size:12px;color:#d0e0e5}
-@media(max-width:600px){
- .hero h1{font-size:32px}
- header{justify-content:center}
- nav{text-align:center}
- section{padding:40px 5%}
-}
-</style>
+  <meta name="google-site-verification" content="LQAGYqtUr2JZwfR7IGTgYfSJaRj3kfsHyuyVcijE0Fc" />
+
+  <meta name="description" content="Viajaya: descubre destinos, encuentra vuelos, hoteles y actividades para tus próximas vacaciones.">
+  <meta name="theme-color" content="#087e8b">
+
+  <link rel="manifest" href="/Vajaya/manifest.json">
+
+  <title>Viajaya | Tu próxima aventura empieza aquí</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      color: #183044;
+    }
+
+    header {
+      background: #073b4c;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: #20d6c1;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 8px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: #20d6c1; }
+
+    .hero {
+      background:
+        linear-gradient(120deg, #073b4cdd, #087e8bdd),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin: 0 0 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .search {
+      background: white;
+      color: #183044;
+      max-width: 600px;
+      margin: 30px auto 0;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px #001f3030;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccd8df;
+      border-radius: 9px;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    button, .btn {
+      display: inline-block;
+      background: #087e8b;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 9px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover, .btn:hover {
+      background: #065e68;
+    }
+
+    .search button { width: 100%; }
+
+    section {
+      padding: 60px 6%;
+      text-align: center;
+    }
+
+    h2 {
+      color: #073b4c;
+      font-size: 30px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0 auto 35px;
+      line-height: 1.7;
+      color: #526574;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 5px 20px #18304412;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content { padding: 22px; }
+
+    .card h3 { color: #087e8b; }
+
+    .card p {
+      color: #526574;
+      line-height: 1.6;
+    }
+
+    .features { background: #e6f4f3; }
+
+    .feature {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+    }
+
+    .feature h3 { color: #087e8b; }
+
+    .crypto {
+      background: #073b4c;
+      color: white;
+    }
+
+    .crypto h2 { color: #20d6c1; }
+
+    .crypto p { line-height: 1.7; }
+
+    footer {
+      background: #052d3a;
+      color: white;
+      text-align: center;
+      padding: 40px 15px;
+      line-height: 2;
+    }
+
+    footer a {
+      color: #20d6c1;
+      text-decoration: none;
+    }
+
+    .small {
+      font-size: 12px;
+      color: #d0e0e5;
+      max-width: 750px;
+      margin: 15px auto;
+    }
+
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { text-align: center; }
+      .hero h1 { font-size: 32px; }
+      section { padding: 42px 5%; }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
- <div class="logo">✈ VIAJAYA</div>
- <nav>
-  <a href="#destinos">Destinos</a>
-  <a href="#vuelos">Vuelos</a>
-  <a href="#hoteles">Hoteles</a>
-  <a href="#actividades">Actividades</a>
- </nav>
+  <div class="logo">✈ VIAJAYA</div>
+  <nav>
+    <a href="#destinos">Destinos</a>
+    <a href="#vuelos">Vuelos</a>
+    <a href="#hoteles">Hoteles</a>
+    <a href="#actividades">Actividades</a>
+  </nav>
 </header>
 
-<div class="hero">
- <h1>El mundo te está esperando</h1>
- <p>Descubre nuevos lugares. Vive experiencias.
- Reserva tu próxima aventura.</p>
+<main>
 
- <div class="search">
-  <h3>¿A dónde quieres viajar?</h3>
-  <input id="destination" type="text"
-   placeholder="Escribe tu destino: Madrid, París, Roma...">
-  <button onclick="searchTravel()">Buscar mi viaje</button>
- </div>
-</div>
+  <div class="hero">
+    <h1>El mundo te está esperando</h1>
+    <p>Descubre nuevos lugares. Vive experiencias.<br>
+    Reserva tu próxima aventura.</p>
 
-<section id="destinos">
- <h2>Destinos que enamoran</h2>
- <p class="intro">Encuentra inspiración para tu próxima aventura y descubre algunos de los lugares más increíbles del mundo.</p>
+    <div class="search">
+      <h3>¿A dónde quieres viajar?</h3>
+      <input id="destination" type="text"
+        placeholder="Escribe tu destino">
 
- <div class="grid">
-  <article class="card">
-   <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700" alt="París">
-   <div class="card-content">
-    <h3>París</h3>
-    <p>Romanticismo, cultura y experiencias inolvidables.</p>
-    <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk">Explorar</a>
-   </div>
-  </article>
+      <button onclick="searchTravel()">
+        Buscar mi viaje
+      </button>
+    </div>
+  </div>
 
-  <article class="card">
-   <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=700" alt="Italia">
-   <div class="card-content">
-    <h3>Italia</h3>
-    <p>Historia, gastronomía y paisajes espectaculares.</p>
-    <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk">Explorar</a>
-   </div>
-  </article>
+  <section id="destinos">
+    <h2>Destinos que enamoran</h2>
+    <p class="intro">
+      Encuentra inspiración para tu próxima aventura
+      y descubre lugares increíbles.
+    </p>
 
-  <article class="card">
-   <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700" alt="Nueva York">
-   <div class="card-content">
-    <h3>Nueva York</h3>
-    <p>Una ciudad llena de energía y posibilidades.</p>
-    <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk">Explorar</a>
-   </div>
-  </article>
- </div>
-</section>
+    <div class="grid">
 
-<section id="vuelos" class="features">
- <h2>Encuentra tu próximo vuelo</h2>
- <p class="intro">Busca opciones para viajar a cientos de destinos.</p>
- <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk" target="_blank" rel="noopener">Buscar vuelos con Kiwi</a>
-</section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700"
+          alt="París">
+        <div class="card-content">
+          <h3>París</h3>
+          <p>Romanticismo, cultura y experiencias inolvidables.</p>
+          <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk"
+            target="_blank" rel="noopener">Explorar</a>
+        </div>
+      </article>
 
-<section id="hoteles">
- <h2>Tu alojamiento ideal</h2>
- <p class="intro">Estamos preparando nuestra sección de hoteles para ofrecerte más opciones de alojamiento.</p>
- <p>Muy pronto, nuevas opciones de reserva.</p>
-</section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=700"
+          alt="Italia">
+        <div class="card-content">
+          <h3>Italia</h3>
+          <p>Historia, gastronomía y paisajes espectaculares.</p>
+          <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk"
+            target="_blank" rel="noopener">Explorar</a>
+        </div>
+      </article>
 
-<section id="actividades" class="features">
- <h2>Experiencias y actividades</h2>
- <p class="intro">No te limites a visitar un lugar. ¡Vívelo!</p>
- <div class="grid">
-  <article class="feature">
-   <h3>🎟 Excursiones</h3>
-   <p>Descubre actividades y visitas guiadas.</p>
-   <a class="btn" href="https://klook.tpx.lt/R3iMKcjE" target="_blank" rel="noopener">Ver actividades</a>
-  </article>
-  <article class="feature">
-   <h3>🌍 Experiencias</h3>
-   <p>Encuentra aventuras para recordar toda la vida.</p>
-   <a class="btn" href="https://klook.tpx.lt/R3iMKcjE" target="_blank" rel="noopener">Descubrir</a>
-  </article>
- </div>
-</section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700"
+          alt="Nueva York">
+        <div class="card-content">
+          <h3>Nueva York</h3>
+          <p>Una ciudad llena de energía y posibilidades.</p>
+          <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk"
+            target="_blank" rel="noopener">Explorar</a>
+        </div>
+      </article>
 
-<section class="crypto">
- <h2>El futuro de los viajes</h2>
- <p>En Viajaya estamos preparando nuevas opciones de pago, incluida la posibilidad de pagar con Bitcoin.</p>
- <p><strong>Próximamente.</strong> Los pagos con criptomonedas todavía no están habilitados.</p>
-</section>
+    </div>
+  </section>
 
-<section class="features">
- <h2>Viaja con Viajaya</h2>
- <p class="intro">Tu próxima aventura comienza aquí. Explora, compara y descubre nuevas experiencias.</p>
- <a class="btn" href="#destinos">Descubrir destinos</a>
-</section>
+  <section id="vuelos" class="features">
+    <h2>Encuentra tu próximo vuelo</h2>
+    <p class="intro">
+      Descubre opciones para viajar a cientos de destinos.
+    </p>
+    <a class="btn" href="https://kiwi.tpx.lt/tlJCpqTk"
+      target="_blank" rel="noopener">
+      Buscar vuelos con Kiwi
+    </a>
+  </section>
+
+  <section id="hoteles">
+    <h2>Tu alojamiento ideal</h2>
+    <p class="intro">
+      Estamos preparando nuestra sección de hoteles
+      para ofrecerte más opciones de alojamiento.
+    </p>
+    <p>Próximamente, nuevas opciones de reserva.</p>
+  </section>
+
+  <section id="actividades" class="features">
+    <h2>Experiencias y actividades</h2>
+    <p class="intro">
+      No te limites a visitar un lugar. ¡Vívelo!
+    </p>
+
+    <div class="grid">
+      <article class="feature">
+        <h3>🎟 Excursiones</h3>
+        <p>Descubre actividades y visitas guiadas.</p>
+        <a class="btn" href="https://klook.tpx.lt/R3iMKcjE"
+          target="_blank" rel="noopener">Ver actividades</a>
+      </article>
+
+      <article class="feature">
+        <h3>🌍 Experiencias</h3>
+        <p>Encuentra aventuras para recordar toda la vida.</p>
+        <a class="btn" href="https://klook.tpx.lt/R3iMKcjE"
+          target="_blank" rel="noopener">Descubrir</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="crypto">
+    <h2>El futuro de los viajes</h2>
+    <p>
+      En Viajaya estamos preparando nuevas opciones
+      de pago, incluida la posibilidad de pagar con Bitcoin.
+    </p>
+    <p><strong>Próximamente.</strong> Los pagos con Bitcoin
+      todavía no están habilitados.</p>
+  </section>
+
+  <section class="features">
+    <h2>Viaja con Viajaya</h2>
+    <p class="intro">
+      Tu próxima aventura comienza aquí.
+      Explora, compara y descubre nuevas experiencias.
+    </p>
+    <a class="btn" href="#destinos">Descubrir destinos</a>
+  </section>
+
+</main>
 
 <footer>
- <h2 style="color:#20d6c1">VIAJAYA</h2>
- Tu próxima aventura empieza aquí.
- <p>
-  <a href="#destinos">Destinos</a> |
-  <a href="#vuelos">Vuelos</a> |
-  <a href="#hoteles">Hoteles</a> |
-  <a href="#actividades">Actividades</a>
- </p>
- <p class="small">
-  Viajaya puede recibir comisiones por determinadas reservas realizadas mediante enlaces de afiliados. Los precios y las condiciones dependen de cada proveedor.
- </p>
- <p class="small">© 2026 Viajaya. Todos los derechos reservados.</p>
+  <h2 style="color:#20d6c1">VIAJAYA</h2>
+  Tu próxima aventura empieza aquí.
+
+  <p>
+    <a href="#destinos">Destinos</a> |
+    <a href="#vuelos">Vuelos</a> |
+    <a href="#hoteles">Hoteles</a> |
+    <a href="#actividades">Actividades</a>
+  </p>
+
+  <p class="small">
+    Viajaya puede recibir comisiones por determinadas
+    reservas realizadas mediante enlaces de afiliados.
+    Los precios y condiciones dependen de cada proveedor.
+  </p>
+
+  <p class="small">
+    © 2026 Viajaya. Todos los derechos reservados.
+  </p>
 </footer>
 
 <script>
-function searchTravel(){
- const destination=document.getElementById("destination").value.trim();
- if(!destination){
-  alert("Escribe primero tu destino.");
-  return;
- }
- window.open(
-  "https://kiwi.tpx.lt/tlJCpqTk",
-  "_blank",
-  "noopener"
- );
+function searchTravel() {
+  const destination =
+    document.getElementById("destination").value.trim();
+
+  if (!destination) {
+    alert("Escribe primero tu destino.");
+    return;
+  }
+
+  window.open(
+    "https://kiwi.tpx.lt/tlJCpqTk",
+    "_blank",
+    "noopener"
+  );
 }
 </script>
 
